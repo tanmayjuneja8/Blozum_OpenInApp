@@ -268,7 +268,8 @@ bottom: 10px;
 .chatbox__header {
     position: sticky;
     top: 0;
-    height: 20%
+    height: 20%;
+    color: white;
 }
 
 .chatbox__messages {
@@ -323,7 +324,7 @@ bottom: 10px;
 
 .chatbox__heading--header {
     font-size: 1.2rem;
-    color: #000
+    color: #fff
 }
 
 .chatbox__description--header {
