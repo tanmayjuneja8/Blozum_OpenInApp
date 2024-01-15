@@ -544,7 +544,7 @@ bottom: 10px;
 .blz_s {
     width: 10px;
     height: 10px;
-    background-color: #f58698;
+    background-color: #0E6FFF;
     opacity: 0.8;
     display: inline-block;
     margin: 1px;
@@ -584,7 +584,7 @@ bottom: 10px;
 
 .home_button_BLZ {
     border-radius: 50%;
-    background-color: #f58698;
+    background-color: #0E6FFF;
     color: #fff;
     width: calc(3em + 2px);
     height: calc(3em + 2px);
@@ -659,14 +659,14 @@ input {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    border-color: #f58698;
+    border-color: #0E6FFF;
     border-width: thin;
 }
 .thumb-down {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    border-color: #f58698;
+    border-color: #0E6FFF;
     border-width: thin;
 }
 .messages__item--visitor:hover .message-reaction {
