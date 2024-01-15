@@ -372,7 +372,7 @@ bottom: 10px;
     border-bottom-right-radius: 16px;
     background: -webkit-linear-gradient(180deg, #5699FC 0%, #0E6FFF 100%);
     background: linear-gradient(180deg, #5699FC 0%, #0E6FFF 100%);
-    color: #000
+    color: #fff;
 }
 
 .chatbox__footer {
