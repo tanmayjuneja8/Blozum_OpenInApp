@@ -118,8 +118,7 @@ bottom: 75px;
     --font-size: 10px;
     --duration: .44s;
     --duration-line: .84s;
-    font-family: "Avenir Next", Arial, sans-serif;
-    background-color: #fff
+    font-family: "Figtree", "Avenir Next", sans-serif;
 }
 
 .button-35,
