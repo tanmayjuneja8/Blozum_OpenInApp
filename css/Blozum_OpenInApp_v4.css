@@ -1,20 +1,20 @@
-.chatbox,
-.chatbox * {
+.blozum_chatbox,
+.blozum_chatbox * {
     font-family: "Figtree", Arial, sans-serif;
 }
 
-.button-35,
-.button-35:hover {
+.blozum_button-35,
+.blozum_button-35:hover {
     color: #fff
 }
 
-.button-35:hover,
-.chatbox_button button:hover {
+.blozum_button-35:hover,
+.blozum_chatbox_button button:hover {
     box-shadow: #90b89b 0 0 0 3px, transparent 0 0 0 0
 }
 
 @media only screen and (min-width: 1024px) {
-        .chatbox {
+        .blozum_chatbox {
                 width: 100%;
                 height: 88%;
             }
@@ -26,14 +26,14 @@
         transform: translateX(-5%);
     }
 
-    .chatbox__button {
+    .blozum_chatbox__button {
         right: 35px;
         bottom: 35px;
     }
 }
 
 @media only screen and (min-width: 901px) and (max-width:1023px) {
-    .chatbox {
+    .blozum_chatbox {
             width: 100%;
             height: 88%;
         }
@@ -46,14 +46,14 @@
         transform: translateX(-5%);
     }
 
-    .chatbox__button {
+    .blozum_chatbox__button {
         right: 35px;
         bottom: 75px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width:900px) {
-    .chatbox {
+    .blozum_chatbox {
         width: 100%;
         height: 90%;
     }
@@ -66,13 +66,13 @@
         bottom: 75px;
     }
 
-    .chatbox__button {
+    .blozum_chatbox__button {
         right: 35px;
         bottom: 75px;
     }
 }
 @media only screen and (min-width: 601px) and (max-width:767px) {
-    .chatbox {
+    .blozum_chatbox {
         width: 100%;
         height: 90%;
     }
@@ -85,14 +85,14 @@
         bottom: 65px;
     }
 
-    .chatbox__button {
+    .blozum_chatbox__button {
         right: 35px;
         bottom: 75px;
     }
 }
 
 @media screen and (min-width: 200px) and (max-width:601px) {
-    .chatbox {
+    .blozum_chatbox {
         width: 92%;
         height: 89%;
     }
@@ -103,7 +103,7 @@
             height: 81%;
             bottom: 59px;
         }
-.chatbox__button {
+.blozum_chatbox__button {
 right: 15px;
 bottom: 75px;
 }
@@ -118,11 +118,11 @@ bottom: 75px;
     --font-size: 10px;
     --duration: .44s;
     --duration-line: .84s;
-    font-family: "Figtree", "Avenir Next", sans-serif;
+    font-family: "Figtree-Regular", "Avenir Next", sans-serif;
 }
 
-.button-35,
-.button-35:hover{
+.blozum_button-35,
+.blozum_button-35:hover{
     background-color: #000
 }
 
@@ -141,8 +141,8 @@ bottom: 75px;
     opacity: 1;
     visibility: visible;
 }
-.button-3,
-.button-35 {
+.blozum_button-3,
+.blozum_button-35 {
     display: inline-flex;
     line-height: 1;
     padding: 15px;
@@ -153,13 +153,13 @@ bottom: 75px;
 }
 
 *,
-.button-3,
-.button-35 {
+.blozum_button-3,
+.blozum_button-35 {
     box-sizing: border-box;
     margin: 0
 }
 
-.button-35 {
+.blozum_button-35 {
     align-items: center;
     border-radius: 15px;
     box-shadow: transparent 0 0 0 6px, rgba(18, 18, 18, .4) 0 6px 20px;
@@ -176,7 +176,7 @@ bottom: 75px;
     -webkit-user-select: none
 }
 
-.button-3 {
+.blozum_button-3 {
     background: 0 0;
     outline: 0;
     cursor: pointer
@@ -216,7 +216,7 @@ bottom: 75px;
     box-shadow: #ccc 0 0 0 3px, transparent 0 0 0 0;
 }
 
-.button-3 {
+.blozum_button-3 {
     align-items: center;
     border-radius: 15px;
     background: #e1edff;
@@ -232,7 +232,7 @@ bottom: 75px;
     margin: 0 3px;
 }
 
-.button-3:hover {
+.blozum_button-3:hover {
     box-shadow: transparent 0 0 0 3px, rgba(36, 36, 36, .4) 0 3px 5px;
     font-weight: 700
 }
@@ -249,12 +249,12 @@ bottom: 75px;
     --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1)
 }
 
-.chatbox {
+.blozum_chatbox {
     position: absolute;
     right: 10px;
 }
 
-.chatbox__support {
+.blozum_chatbox__support {
     display: flex;
     flex-direction: column;
     z-index: 0;
@@ -267,13 +267,13 @@ bottom: 75px;
     border-radius: 20px 20px 0
 }
 
-.chatbox--active {
+.blozum_chatbox--active {
     transform: translateY(-8px);
     z-index: 1234;
     opacity: 1
 }
 
-.chatbox__button {
+.blozum_chatbox__button {
     text-align: right;
     position: fixed;
         z-index: 999;
@@ -284,14 +284,14 @@ bottom: 75px;
     border: none
 }
 
-.chatbox__header {
+.blozum_chatbox__header {
     position: sticky;
     top: 0;
     height: 20%;
     color: white;
 }
 
-.chatbox__messages {
+.blozum_chatbox__messages {
     margin-top: auto;
     display: flex;
     overflow-y: scroll;
@@ -308,14 +308,14 @@ bottom: 75px;
     max-width: 100%;
 }
 
-.chatbox__footer {
+.blozum_chatbox__footer {
     position: sticky;
     bottom: 0;
     height: 10.5%;
     z-index: 999
 }
 
-.chatbox__header {
+.blozum_chatbox__header {
     background: var(--secondaryGradient);
     display: flex;
     flex-direction: row;
@@ -348,22 +348,22 @@ bottom: 75px;
     border-top-left-radius: 20px;
 }
 
-.chatbox__image--header {
+.blozum_chatbox__image--header {
     margin-right: 10px;
     z-index: -999
 }
 
-.chatbox__heading--header {
+.blozum_chatbox__heading--header {
     font-size: 1.2rem;
     color: #fff
 }
 
-.chatbox__description--header {
+.blozum_chatbox__description--header {
     font-size: .9rem;
     color: #000;
 }
 
-.chatbox__messages {
+.blozum_chatbox__messages {
     padding: 0 15px 8px
 }
 
@@ -395,7 +395,7 @@ bottom: 75px;
     color: #fff;
 }
 
-.chatbox__footer {
+.blozum_chatbox__footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -409,7 +409,7 @@ bottom: 75px;
     margin-top: 20px
 }
 
-.chatbox__footer input {
+.blozum_chatbox__footer input {
     width: 90%;
     border: none;
     padding: 10px;
@@ -418,11 +418,11 @@ bottom: 75px;
     color: #000;
 }
 
-.chatbox__send--footer {
+.blozum_chatbox__send--footer {
     color: #fff
 }
 
-.chatbox__button button {
+.blozum_chatbox__button button {
     padding: 5px;
     background: #fff;
     border-radius: 50px 0 50px 50px;
@@ -430,7 +430,7 @@ bottom: 75px;
     cursor: pointer;
 }
 
-.chatbox_button button:hover {
+.blozum_chatbox_button button:hover {
     background-color: #90b89b;
     color: #fff
 }
@@ -598,7 +598,7 @@ bottom: 75px;
     }
 }
 
-.chatbox__content--header {
+.blozum_chatbox__content--header {
     margin-left: 10px;
 }
 
