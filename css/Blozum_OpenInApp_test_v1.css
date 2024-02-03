@@ -20,7 +20,7 @@
             }
     .blozum_container {
         right: 0%;
-        width: 33%;
+        width: 400px;
         height: 82%;
         bottom: 20px;
         transform: translateX(-5%);
@@ -40,7 +40,7 @@
 
     .blozum_container {
         right: 0%;
-        width: 33%;
+        width: 400px;
         height: 82%;
         bottom: 55px;
         transform: translateX(-5%);
@@ -61,8 +61,8 @@
     .blozum_container {
         right: 0%;
         transform: translateX(-5%);
-        width: 50%;
-        height: 79%;
+        width: 400px;
+        height: 80%;
         bottom: 75px;
     }
 
@@ -80,7 +80,7 @@
     .blozum_container {
         right: 0%;
         transform: translateX(-5%);
-        width: 50%;
+        width: 400px;
         height: 80%;
         bottom: 65px;
     }
@@ -671,19 +671,34 @@ input {
     top: 50%;
     transform: translateY(-50%);
 }
-.thumb-up {
+.thumb-up,
+.thumb-down {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
     border-radius: 50%;
+    border-color: #ccc;
     width: 25px;
     height: 25px;
-    border-color: #0E6FFF;
     border-width: thin;
 }
-.thumb-down {
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+
+/* Highlight the active (enabled) button */
+.blz_active {
+    background-color: #0E6FFF;
+    /* Blue background for active state */
+    color: white;
     border-color: #0E6FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-width: thin;
+}
+
+.thumb-down:hover,
+.thumb-up:hover {
+    color: #0e6fff;
+    transition: all .2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
 }
 .messages__item--visitor:hover .message-reaction {
     display: contents;
