@@ -16,6 +16,7 @@
 @media only screen and (min-width: 1024px) {
         .blozum_chatbox {
                 width: 100%;
+                right: 10px;
                 height: 88%;
             }
     .blozum_container {
@@ -35,6 +36,7 @@
 @media only screen and (min-width: 901px) and (max-width:1023px) {
     .blozum_chatbox {
             width: 100%;
+            right: 10px;
             height: 88%;
         }
 
@@ -55,6 +57,7 @@
 @media only screen and (min-width: 768px) and (max-width:900px) {
     .blozum_chatbox {
         width: 100%;
+        right: 10px;
         height: 90%;
     }
 
@@ -73,6 +76,7 @@
 }
 @media only screen and (min-width: 601px) and (max-width:767px) {
     .blozum_chatbox {
+        right: 10px;
         width: 100%;
         height: 90%;
     }
@@ -93,7 +97,8 @@
 
 @media screen and (max-width:601px) {
     .blozum_chatbox {
-        width: 92%;
+        width: 97.5%;
+        right: 5px;
         height: 89%;
     }
     .blozum_container {
@@ -104,7 +109,7 @@
             bottom: 67px;
         }
 .blozum_chatbox__button {
-right: 15px;
+right: 10px;
 bottom: 75px;
 }
 }
@@ -251,7 +256,6 @@ bottom: 75px;
 
 .blozum_chatbox {
     position: absolute;
-    right: 10px;
 }
 
 .blozum_chatbox__support {
@@ -702,4 +706,8 @@ input {
 }
 .messages__item--visitor:hover .message-reaction {
     display: contents;
+}
+.blozum_no-scroll {
+    overflow: hidden;
+    height: 100%;
 }
