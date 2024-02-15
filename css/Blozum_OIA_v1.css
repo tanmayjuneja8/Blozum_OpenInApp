@@ -10,7 +10,7 @@
 
 .blozum_button-35:hover,
 .blozum_chatbox_button button:hover {
-    box-shadow: #0E6FFF 0 0 0 3px, transparent 0 0 0 0
+    box-shadow: #0E6FFF 0 0 0 2px, transparent 0 0 0 0
 }
 
 @media only screen and (min-width: 1024px) {
