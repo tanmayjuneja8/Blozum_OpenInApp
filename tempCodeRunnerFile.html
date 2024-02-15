@@ -1,1 +1,581 @@
-VB0wmdLpdFazoeP8i0eXr1Qoo55XuoTT2ZqFwZi1
+<script>
+		var z = 'https://cdn.jsdelivr.net/gh/tanmayjuneja8/Blozum_OpenInApp/css/Blozum_OIA_v2.css';
+		var u = document.createElement('link');
+		u.rel = 'stylesheet';
+		u.type = 'text/css';
+		u.href = z;
+		document.head.appendChild(u);
+	</script>
+	<script>
+		(function (apiKey) {
+			// var initializeChatbot = function (apiKey) {
+
+			var uuid = localStorage.getItem("uuid");
+			var ticket_created = "False";
+			var state = false;
+			if (!uuid) {
+				uuid = uuidv4();
+				localStorage.setItem("uuid", uuid);
+			}
+			var blozum_container = document.createElement("div");
+			blozum_container.className = "blozum_container";
+
+			var blozum_chatbox = document.createElement("div");
+			blozum_chatbox.className = "blozum_chatbox";
+
+			var supportDiv = document.createElement("div");
+			supportDiv.className = "blozum_chatbox__support";
+
+			var headerDiv = document.createElement("div");
+			headerDiv.className = "blozum_chatbox__header";
+
+			var imageDiv = document.createElement("div");
+			imageDiv.className = "blozum_chatbox__image--header";
+			imageDiv.innerHTML = `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<rect width="48" height="48" rx="24" fill="white"/>
+			<path d="M34.9053 16.6413C34.9053 16.3063 34.883 15.9713 34.8607 15.6586C34.7713 14.81 34.615 14.006 34.347 13.2243C33.5654 13.001 32.739 12.867 31.8904 12.8223C31.7341 12.8223 31.5777 12.8 31.4214 12.8C28.5628 12.8 25.9721 13.939 24.0738 15.7926C23.3145 15.6139 22.5552 15.5246 21.7512 15.5246C19.5849 15.5246 17.5749 16.1723 15.9 17.2889C15.2076 17.7579 14.56 18.2939 14.0016 18.8969C14.1803 19.7232 14.4483 20.5049 14.8056 21.2419C16.101 23.9218 18.4906 25.9541 21.3939 26.8028C22.3095 29.4827 24.2525 31.6714 26.7761 32.8774C27.4908 33.2347 28.2724 33.5027 29.0764 33.6813C29.6571 33.123 30.1931 32.4754 30.6397 31.783C31.6894 30.1304 32.3147 28.1874 32.3147 26.0881C32.3147 25.3065 32.2254 24.5471 32.069 23.8325C33.8334 21.9565 34.9053 19.4106 34.9053 16.6413ZM20.8355 23.3858C20.8355 23.7208 20.8579 24.0558 20.8802 24.3685C18.8032 23.4305 17.1729 21.7109 16.3689 19.5446C17.8206 18.3609 19.6966 17.6239 21.7289 17.6239C21.9969 17.6239 22.2425 17.6462 22.5105 17.6686C21.4609 19.3212 20.8355 21.2865 20.8355 23.3858ZM23.1135 25.0161C23.0018 24.4801 22.9572 23.9442 22.9572 23.3858C22.9572 21.4205 23.6272 19.6339 24.7438 18.2046C27.0441 19.0756 28.8531 20.9069 29.6794 23.2072C28.2278 24.3908 26.3518 25.1278 24.3195 25.1278C23.9175 25.0831 23.5155 25.0608 23.1135 25.0161ZM28.4064 31.2917C26.4188 30.5324 24.8108 29.0807 23.8505 27.2048C24.0068 27.2048 24.1632 27.2271 24.3195 27.2271C26.4858 27.2271 28.4958 26.5794 30.1707 25.4628C30.1931 25.6861 30.1931 25.8871 30.1931 26.1105C30.1931 28.0534 29.5454 29.8401 28.4064 31.2917ZM26.3741 16.5966C27.7811 15.5469 29.5231 14.9216 31.4214 14.9216C31.8457 14.9216 32.2477 14.944 32.6274 15.011C32.739 15.5469 32.7837 16.0829 32.7837 16.6413C32.7837 18.4502 32.2254 20.1252 31.2427 21.4875C30.2154 19.3659 28.4958 17.6239 26.3741 16.5966Z" fill="#0E6FFF"/>
+			<path d="M21.7512 29.2815C21.7512 29.2815 21.6619 28.3882 20.7016 27.4725C19.7412 26.5569 18.8479 26.4899 18.8479 26.4899C12.617 25.3286 13.6667 34.7531 13.6667 34.7531C13.6667 34.7531 23.1135 35.4678 21.7512 29.2815ZM15.6766 32.6538C15.6766 32.6538 15.5203 28.2319 18.4236 28.5445C18.4236 28.5445 18.8479 28.5445 19.2723 28.9465C19.6966 29.3485 19.6966 29.7728 19.6966 29.7728C20.0986 32.6538 15.6766 32.6538 15.6766 32.6538Z" fill="#0E6FFF"/>
+			</svg>
+			`;
+			//imageDiv.appendChild(svgElement);
+
+			var contentDiv = document.createElement("div");
+			contentDiv.className = "blozum_chatbox__content--header";
+
+			var heading = document.createElement("h4");
+			heading.className = "blozum_chatbox__heading--header";
+			heading.textContent = "OpenInApp Support";
+
+			contentDiv.appendChild(heading);
+
+			headerDiv.appendChild(imageDiv);
+			headerDiv.appendChild(contentDiv);
+
+			var messagesDiv = document.createElement("div");
+			messagesDiv.className = "blozum_chatbox__messages";
+			var innerDiv = document.createElement("div");
+			messagesDiv.appendChild(innerDiv);
+
+			var footerDiv = document.createElement("div");
+			footerDiv.className = "blozum_chatbox__footer";
+
+			var input = document.createElement("input");
+			input.type = "text";
+			input.id = "BLZ_input";
+			input.placeholder = "Ask me anything about OpenInApp...";
+			input.style.backgroundColor = "#fff";
+			input.style.margin = 0;
+			input.maxLength = 250;
+
+			const blozum = document.createElement("div");
+			blozum.className = "blozum";
+			blozum.innerHTML =
+				"Powered by <strong><a class='link' href='https://blozum.com/'>Blozum</a></strong>";
+
+			var sendButton = document.createElement("button");
+			sendButton.className = "blozum_chatbox__send--footer send__button_BLZ";
+			sendButton.id = "BLZ_send";
+
+			var sendIconSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+			sendIconSVG.setAttribute("viewBox", "-4.8 -4.8 33.60 33.60");
+			sendIconSVG.setAttribute("width", "40px");
+			sendIconSVG.setAttribute("height", "40px");
+			sendIconSVG.setAttribute("fill", "none");
+			sendIconSVG.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+			sendIconSVG.setAttribute("stroke", "#");
+			sendIconSVG.setAttribute("stroke-width", "0.00024000000000000003");
+
+			var sendPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+			sendPath.setAttribute("fill-rule", "evenodd");
+			sendPath.setAttribute("clip-rule", "evenodd");
+			sendPath.setAttribute("d", "M1.265 4.42619C1.04293 2.87167 2.6169 1.67931 4.05323 2.31397L21.8341 10.1706C23.423 10.8727 23.423 13.1273 21.8341 13.8294L4.05323 21.686C2.6169 22.3207 1.04293 21.1283 1.265 19.5738L1.99102 14.4917C2.06002 14.0087 2.41458 13.6156 2.88791 13.4972L8.87688 12L2.88791 10.5028C2.41458 10.3844 2.06002 9.99129 1.99102 9.50829L1.265 4.42619ZM21.0257 12L3.2449 4.14335L3.89484 8.69294L12.8545 10.9328C13.9654 11.2106 13.9654 12.7894 12.8545 13.0672L3.89484 15.3071L3.2449 19.8566L21.0257 12Z");
+			sendPath.setAttribute("fill", "#fff");
+
+			sendIconSVG.appendChild(sendPath);
+			sendButton.appendChild(sendIconSVG);
+
+
+			// footerDiv.appendChild(homeButton);
+			footerDiv.appendChild(input);
+			footerDiv.appendChild(sendButton);
+			footerDiv.appendChild(blozum);
+
+			supportDiv.appendChild(headerDiv);
+			supportDiv.appendChild(messagesDiv);
+			supportDiv.appendChild(footerDiv);
+			supportDiv.appendChild(blozum);
+			blozum_chatbox.appendChild(supportDiv);
+
+			var buttonDiv = document.createElement("div");
+			buttonDiv.className = "blozum_chatbox__button";
+			var button = document.createElement("button");
+			button.className = "blozum_button-35";
+			button.id = "chat_button";
+
+			// button.appendChild(svgElement);
+			button.innerHTML = `<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="0.428223" width="48" height="48" rx="24" fill="#F2F2F2"/>
+<path d="M15.1351 15.238L24.2363 24.2691M24.2363 24.2691L15.1351 33.3001M24.2363 24.2691L33.3374 33.3001M24.2363 24.2691L33.3374 15.238" stroke="black" stroke-opacity="0.28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+			`;
+			buttonDiv.appendChild(button);
+
+			// blozum_chatbox.appendChild(buttonDiv);
+
+			blozum_container.appendChild(blozum_chatbox);
+
+			// Append the blozum_container to the document body
+			document.body.appendChild(blozum_container);
+			document.body.appendChild(buttonDiv);
+			var openButton = document.querySelector(".blozum_chatbox__button");
+			var blozum_chatbox = document.querySelector(".blozum_chatbox__support");
+			homeButtonBLZ(); // showing the menu programmatically
+			var messages = [];
+			var chat_history_blz = [];
+			var selectedOption = `none`;
+			var buttons = document.querySelectorAll(".blozum_button-3");
+			document.addEventListener('click', function (event) {
+				if (state) {
+					var isClickInsideblozum_chatbox = blozum_chatbox.contains(event.target);
+					var isClickOnOpenButton = openButton.contains(event.target);
+					var isItInsideButton = false;
+					if (event.target.className === "blozum_button-3") {
+						isItInsideButton = true;
+					}
+
+					if (!isItInsideButton) {
+						if (!isClickInsideblozum_chatbox && !isClickOnOpenButton) {
+							OpenCloseBlozum();
+						}
+					}
+				}
+			});
+			openButton.addEventListener("click", () => OpenCloseBlozum());
+
+			document.querySelector(".send__button_BLZ").addEventListener("click", () => onSendButton(blozum_chatbox));
+
+			var node = blozum_chatbox.querySelector("input");
+			node.addEventListener("keyup", ({ key }) => {
+				if (key === "Enter") {
+					document.querySelector(".send__button_BLZ").click();
+				}
+			});
+
+
+			var blozum_container12 = document.querySelector(".blozum_container");
+			// blozum_container12.style.display = 'none';
+			document.querySelectorAll('.link').forEach(link => {
+				link.innerHTML = '<div><span>' + link.textContent.trim().split('').join('</span><span>') + '</span></div>'
+				link.querySelectorAll('span').forEach(s => s.innerHTML = s.textContent == ' ' ? '&nbsp;' : s.textContent)
+				link.insertAdjacentHTML('beforeend', '<div><svg preserveAspectRatio="none" viewBox="0 0 192 5"><path d="M191.246 4H129C129 4 127.781 4.00674 127 4C114.767 3.89447 108.233 1 96 1C83.7669 1 77.2327 3.89447 65 4C64.219 4.00674 63 4 63 4H0.751923" /></svg></div>')
+			});
+
+			function OpenCloseBlozum() {
+				console.log(state);
+				event.stopPropagation();
+				let chat_button = document.getElementById("chat_button");
+				let blozum_chatbox = document.querySelector(".blozum_chatbox__support");
+				state = !state;
+
+				if (state) {
+					blozum_container12.style.display = 'flex';
+					chat_button.style.display = 'flex';
+					document.body.classList.add('blozum_no-scroll');
+					setTimeout(function () {
+						blozum_container12.classList.add('visible');
+					}, 10);
+					blozum_chatbox.classList.add("blozum_chatbox--active");
+					chat_button.style.backgroundColor = "black";
+				} else {
+					blozum_container12.classList.remove('visible');
+					chat_button.style.display = 'none';
+					document.body.classList.remove('blozum_no-scroll');
+					setTimeout(function () {
+						blozum_container12.style.display = 'none';
+					}, 500);
+					blozum_chatbox.classList.remove("blozum_chatbox--active");
+					chat_button.style.backgroundColor = "white";
+				}
+			}
+			function handleReaction(isPositive) {
+				// Obtain both buttons
+				var thumbUpButton = document.querySelector(".thumb-up");
+				var thumbDownButton = document.querySelector(".thumb-down");
+				// Call your backend function here
+				if (isPositive === "True") {
+					if (thumbUpButton.classList.contains("blz_active")) {
+						thumbUpButton.classList.remove("blz_active");
+					} else {
+						thumbUpButton.classList.add("blz_active");
+						thumbDownButton.classList.remove("blz_active");
+					}
+					fetch(
+						"https://7xnprgida1.execute-api.ap-south-1.amazonaws.com/default/BLZ_OpenInApp",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								"x-api-key": apiKey,
+							},
+							body: JSON.stringify({
+								message: "👍",
+								user: uuid,
+							}),
+						}
+					)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (botMessage) { console.log(botMessage); })
+
+				}
+				if (isPositive === 'false') {
+					if (thumbDownButton.classList.contains("blz_active")) {
+						thumbDownButton.classList.remove("blz_active");
+					} else {
+						thumbDownButton.classList.add("blz_active");
+						thumbUpButton.classList.remove("blz_active");
+					}
+					fetch(
+						"https://7xnprgida1.execute-api.ap-south-1.amazonaws.com/default/BLZ_OpenInApp",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								"x-api-key": apiKey,
+							},
+							body: JSON.stringify({
+								message: "👎",
+								user: uuid,
+							}),
+						}
+					)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (botMessage) { console.log(botMessage); })
+
+				}
+			}
+			function scrollChatToBottom() {
+				// Get the chat messages blozum_container
+				var chatMessages = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+
+				// Scroll to the bottom
+				chatMessages.scrollTop = chatMessages.scrollHeight;
+			}
+
+			function homeButtonBLZ() {
+				var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+				if (!chatmessage.firstChild.classList.contains("visitor_menu_BLZ")) {
+					var html = `<div class="visitor_menu_BLZ">
+									<div class="flex-blozum_container">
+										<button class="blozum_button-3" id="yt_cash" onclick="selectOption('yt_cash')">YT Cash</button>
+										<button class="blozum_button-3" id="captions" onclick="selectOption('captions')">Captions</button>
+									</div>
+									<div style="height: 5px;"></div>
+									<div class="flex-blozum_container">
+										<button class="blozum_button-3" id="ig_cash" onclick="selectOption('ig_cash')">IG Cash</button>
+										<button class="blozum_button-3" id="call_with_fans" onclick="selectOption('call_with_fans')">Call with Fans</button>
+									</div>
+									<div style="height: 5px;"></div>
+									<div class="flex-blozum_container">
+										<button class="blozum_button-3" style="background:#0E6FFF; color:#fff" onclick="selectOption('get_started')">Get Started</button>
+									</div>
+								</div>`;
+					chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+				}
+				scrollChatToBottom();
+			}
+
+			function fetchChatMessage(request_options) {
+				try {
+					fetch(
+						"https://7xnprgida1.execute-api.ap-south-1.amazonaws.com/default/BLZ_OpenInApp",
+						request_options
+					)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (response) {
+							var jsonData = JSON.parse(response);
+							if (typeof jsonData === "object") {
+								var html = `<div class="messages__item messages__item--visitor"><span class="message-content">`
+								for (var key in jsonData) {
+									if (jsonData.hasOwnProperty(key)) {
+										if (key === 'messages') {
+											html = html + jsonData[key];
+										}
+									}
+									else {
+										html = html + jsonData[key];
+									}
+								}
+								html += `</span><br>
+									             <div class="message-reaction">
+									               <button class="thumb-up" onclick="handleReaction('True')">👍</button>
+									               <button class="thumb-down" onclick="handleReaction('false')">👎</button>
+									             </div></div>`;
+								chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+								const dotss = document.getElementById("animation_dots");
+								dotss.remove();
+								chatmessage.innerHTML = html + chatmessage.innerHTML;
+								// homeButtonBLZ();  // Clicking the home_button_BLZ_1 button programmatically
+							}
+						});
+				}
+				catch (e) {
+					console.log(e);
+				}
+				scrollChatToBottom();
+			}
+			async function onSendButton(blozum_chatbox) {
+				scrollChatToBottom();
+				document.querySelector("#BLZ_send").disabled = true;
+				var textField = document.getElementById("BLZ_input");
+				var text1 = textField.value;
+				if (text1 === "") {
+					return scrollChatToBottom();
+				}
+				var html =
+					'<div class="messages__item messages__item--operator">' +
+					text1 +
+					"</div>";
+
+				chat_history_blz.push({ "role": "user", "content": text1 });
+				var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+				chatmessage.innerHTML = html + chatmessage.innerHTML;
+				chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+				const dotss = document.getElementById("animation_dots");
+				textField.value = "";
+				try {
+					fetch(
+						"https://7xnprgida1.execute-api.ap-south-1.amazonaws.com/default/BLZ_OpenInApp",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								"x-api-key": apiKey,
+							},
+							body: JSON.stringify({
+								message: chat_history_blz,
+								user: uuid,
+							}),
+						}
+					)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (botMessage) {
+							chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+							document.querySelector("#BLZ_send").disabled = false;
+							try {
+								var jsonData = JSON.parse(botMessage);
+								dotss.remove();
+								if (typeof jsonData === "object") {
+									var html = `<div class="messages__item messages__item--visitor"><span class="message-content">`
+									for (var key in jsonData) {
+										if (jsonData.hasOwnProperty(key)) {
+											chat_history_blz.push({ "role": "assistant", "content": jsonData[key] });
+											html = html + jsonData[key];
+										}
+										else {
+											html = html + jsonData[key];
+										}
+									}
+									html += `</span><br>
+									             <div class="message-reaction">
+									               <button class="thumb-up" onclick="handleReaction('True')">👍</button>
+									               <button class="thumb-down" onclick="handleReaction('false')">👎</button>
+									             </div></div>`;
+									chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+									chatmessage.innerHTML = html + chatmessage.innerHTML;
+								}
+							}
+							catch (error) {
+								// Regular bot message
+								html = "";
+								dotss.remove();
+								chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+								chatmessage.innerHTML = html + chatmessage.innerHTML;
+								// homeButtonBLZ();  // Clicking the home_button_BLZ_1 button programmatically
+								textField.value = "";
+							}
+						});
+				}
+				catch (e) {
+					document.querySelector("#BLZ_send").disabled = false;
+					console.error(e);
+				}
+				scrollChatToBottom();
+			}
+
+			function updateChatText(blozum_chatbox) {
+				var html = "";
+				messages
+					.slice()
+					.reverse()
+					.forEach(function (item, index) {
+						if (item.name === "Blozum") {
+							html +=
+								'<div class="messages__item messages__item--visitor"><span class="message-content">' +
+								item.message +
+								`</span><br>
+									             <div class="message-reaction">
+									               <button class="thumb-up" onclick="handleReaction('True')">👍</button>
+									               <button class="thumb-down" onclick="handleReaction('false')">👎</button>
+									             </div></div>`;
+						} else if (item.name === "User") {
+							html +=
+								'<div class="messages__item messages__item--operator">' +
+								item.message +
+								"</div>";
+						}
+					});
+				var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+				chatmessage.innerHTML = html + chatmessage.innerHTML;
+				return;
+			}
+
+			async function update_button_click(button) {
+				try {
+					fetch(
+						"https://7xnprgida1.execute-api.ap-south-1.amazonaws.com/default/BLZ_OpenInApp",
+						{
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+								"x-api-key": apiKey,
+							},
+							body: JSON.stringify({
+								message: button,
+								user: "button_click",
+							}),
+						}
+					)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (response) {
+							var jsonData = JSON.parse(response);
+							console.log(jsonData);
+						});
+				}
+				catch (e) {
+					console.log(e);
+				}
+				scrollChatToBottom();
+			}
+			async function selectOption(option) {
+				var textField1 = blozum_chatbox.querySelector("input");
+				blozum_chatbox = document.querySelector(".blozum_chatbox__support");
+				var Option1 = "Yes123";
+				var html = "";
+				var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+				if (option === "yt_cash") {
+					selectedOption = `yt_cash`;
+
+					var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+					update_button_click('yt_cash');
+					var html = `<div class="messages__item messages__item--visitor"><span class="message-content">
+With OpenInApp YT Cash, you can earn a commission by adding OpenInApp's Commission Links to your YouTube video description. Our AI analyzes your video content to identify mentioned products and generates commission links with brief descriptions. You can track clicks and earnings on our platform and transfer your earnings to your account whenever you wish.
+					</span><br>
+									<div class="message-reaction">
+										<button class="thumb-up" onclick="handleReaction('True')">👍</button>
+										<button class="thumb-down" onclick=" handleReaction('false')">👎</button>
+									             </div ></div >`;
+					const dotss = document.getElementById("animation_dots");
+					dotss.remove();
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					scrollChatToBottom();
+				}
+				else if (option === "captions") {
+					selectedOption = `captions`;
+					var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+					update_button_click('captions');
+					var html = `<div class="messages__item messages__item--visitor"><span class="message-content">
+OpenInApp's CaptionGPT generates engaging captions for social media posts. By uploading a photo, users receive multiple caption options, crafted by AI to match the quality of Shakespearean prose. The tool also suggests relevant hashtags to enhance post visibility and engagement on platforms like Instagram. It's a great solution for those struggling to find the right words to accompany their posts.
+					</span><br>
+									<div class="message-reaction">
+										<button class="thumb-up" onclick="handleReaction('True')">👍</button>
+										<button class="thumb-down" onclick=" handleReaction('false')">👎</button>
+									             </div ></div >`;
+					const dotss = document.getElementById("animation_dots");
+					dotss.remove();
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					scrollChatToBottom();
+				}
+				else if (option === "ig_cash") {
+					selectedOption = `ig_cash`;
+					var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+					update_button_click('ig_cash');
+					var html = `<div class="messages__item messages__item--visitor"><span class="message-content">
+IG Cash is a feature of OpenInApp that allows Instagram users to earn commissions by sharing product links. Our AI technology identifies products in uploaded photos and finds them on Amazon. Users can create a mini-store with these products for their followers to browse and purchase from. It's a great way to monetize your Instagram presence.
+					</span><br>
+									<div class="message-reaction">
+										<button class="thumb-up" onclick="handleReaction('True')">👍</button>
+										<button class="thumb-down" onclick=" handleReaction('false')">👎</button>
+									             </div ></div >`;
+					const dotss = document.getElementById("animation_dots");
+					dotss.remove();
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					scrollChatToBottom();
+				}
+				else if (option === "call_with_fans") {
+					selectedOption = `call_with_fans`;
+					var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+					update_button_click('call_with_fans');
+					var html = `<div class="messages__item messages__item--visitor"><span class="message-content">
+						Call with Fans is a feature offered by OpenInApp that allows creators to have direct one-on-one communication with their fans through calls. Creators can set a basic price for these calls, ensuring genuine interaction with their fans. This feature helps enhance the relationship between creators and their fans.
+					</span><br>
+									<div class="message-reaction">
+										<button class="thumb-up" onclick="handleReaction('True')">👍</button>
+										<button class="thumb-down" onclick=" handleReaction('false')">👎</button>
+									             </div ></div >`;
+					const dotss = document.getElementById("animation_dots");
+					dotss.remove();
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					scrollChatToBottom();
+				}
+				else if (option === "get_started") {
+					var chatmessage = blozum_chatbox.querySelector(".blozum_chatbox__messages");
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					chatmessage.innerHTML = '<div class="messages__item messages__item--visitor" id="animation_dots"><div class="typing-animation"><span class="blz_s"></span><span class="blz_s"></span><span class="blz_s"></span></div></div>' + chatmessage.innerHTML;
+					update_button_click('get_started');
+					var html = `<div class="messages__item messages__item--visitor"><span class="message-content"><b>Get Started:-</b>
+			<br><br>
+			1. Click on the login button to get get started.
+			<br>
+			2. Choose your method of Login.
+			<br>
+			3. Verify your phone number or mail id.<br></span>
+									<div class="message-reaction">
+										<button class="thumb-up" onclick="handleReaction('True')">👍</button>
+										<button class="thumb-down" onclick=" handleReaction('false')">👎</button>
+									             </div ></div >`;
+					const dotss = document.getElementById("animation_dots");
+					dotss.remove();
+					chatmessage.innerHTML = html + chatmessage.innerHTML;
+					scrollChatToBottom();
+				}
+			}
+
+			window.selectOption = selectOption;
+			window.homeButtonBLZ = homeButtonBLZ;
+			window.sendButton = sendButton;
+			window.handleReaction = handleReaction;
+			window.openCloseBlozum = OpenCloseBlozum;
+			window.state = state;
+			//}
+		})("iWF6dkEGPZ7qL5BW7CLyO61cv7H20loycSOkRtnd");
+	</script>   

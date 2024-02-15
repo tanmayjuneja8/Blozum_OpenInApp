@@ -10,7 +10,7 @@
 
 .blozum_button-35:hover,
 .blozum_chatbox_button button:hover {
-    box-shadow: #90b89b 0 0 0 3px, transparent 0 0 0 0
+    box-shadow: #0E6FFF 0 0 0 3px, transparent 0 0 0 0
 }
 
 @media only screen and (min-width: 1024px) {
@@ -268,7 +268,7 @@ bottom: 75px;
     height: 100%;
     width: 100%;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    border-radius: 20px 20px 0
+    border-radius: 20px 20px 0;
 }
 
 .blozum_chatbox--active {
@@ -431,7 +431,7 @@ bottom: 75px;
 }
 
 .blozum_chatbox_button button:hover {
-    background-color: #90b89b;
+    background-color: #0E6FFF;
     color: #fff
 }
 
